@@ -1,1 +1,50 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        
+        
 
+        System.out.println("Please enter what operation you would like to do according to it's number:"
+        + "\n 1 - Addition"
+        + "\n 2 - Subtraction"
+        + "\n 3 - Multiplication"
+        + "\n 4 - Division");
+        int userInput = myObj.nextInt();
+
+        if(userInput !=1 && userInput != 2 && userInput != 3 && userInput != 4)
+        {
+            System.out.println("User input invalid, exiting program please rerun");
+            System.exit(1);
+        }
+        
+        System.out.print("Enter what your first number:");
+        double num1 = myObj.nextDouble();
+
+        System.out.print("Enter what your second number:");
+        double num2 = myObj.nextDouble();
+
+        
+        
+        if(userInput == 1)
+        {
+            System.out.println(num1 + " + " + num2 + " = " + (num1 +num2));
+        }
+        else if(userInput == 2)
+        {
+            System.out.println(num1 + " - " + num2 + " = " + (num1 -num2));
+        }
+        else if(userInput == 3)
+        {
+            System.out.println(num1 + " * " + num2 + " = " + (num1 *num2 ));
+        }
+        else if(userInput == 4)
+        {
+            System.out.println(num1 + " / " + num2 + " = " + (num1 /num2 ));
+        }
+        else
+        {
+            System.out.println("User input invalid, please restart program and try again!");
+        }
+    }
+}
